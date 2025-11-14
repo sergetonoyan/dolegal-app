@@ -24,6 +24,7 @@ origins = [ "http://localhost:8000" ]
 if FRONTEND_URL:
     app_domain = FRONTEND_URL.split('//')[1]
     origins.append(FRONTEND_URL)
+    # This creates the correct URL for DigitalOcean's live app, e.g., https://dolegal-app-asdf2.ondigitalocean.app
     origins.append(f"https://{app_domain.split('.')[0]}.ondigitalocean.app")
 
 app.add_middleware(

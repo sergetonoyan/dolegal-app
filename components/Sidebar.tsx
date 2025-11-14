@@ -39,21 +39,22 @@ const UserProfile: React.FC<{ user: User }> = ({ user }) => {
                     <span className="text-sm font-bold text-gray-700">G</span>
                 </div>
                 <div className="ml-3">
-                    <p className="text-sm font-semibold text-gray-800">Guest</p>
+                    <p className="text-sm font-semibold text-gray-800">Guest User</p>
                 </div>
             </div>
         )
     }
 
+    // This is now a more generic placeholder for any logged-in user
     return (
         <div className="relative" ref={dropdownRef}>
             <button onClick={() => setIsOpen(!isOpen)} className="flex items-center w-full text-left hover:bg-gray-100 p-2 rounded-lg">
                 <div className="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center">
-                    <span className="text-sm font-bold text-blue-700">SL</span>
+                    <span className="text-sm font-bold text-blue-700">RU</span>
                 </div>
                 <div className="ml-3 flex-grow">
-                    <p className="text-sm font-semibold text-gray-800">Startup Lawyers</p>
-                    <p className="text-xs text-gray-500">1,200 / 10,000 tokens</p>
+                    <p className="text-sm font-semibold text-gray-800">Registered User</p>
+                    <p className="text-xs text-gray-500">Basic Plan</p>
                 </div>
                 <svg className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
